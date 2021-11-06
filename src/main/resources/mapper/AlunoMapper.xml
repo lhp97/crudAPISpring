@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="br.com.nutri.app.api.repository.AlunoMapper">
+
+    <resultMap type="br.com.nutri.app.api.model.Aluno" id="alunoResult">
+        <result column="id_aluno" property="idAluno"/>
+        <result column="nome_aluno" property="nomeAluno"/>
+        <result column="idade_aluno" property="idadeAluno"/>
+        <result column="sexo_aluno" property="sexoAluno"/>
+        <result column="cpf" property="cpfAluno"/>
+        <result column="rg" property="rgAluno"/>
+    </resultMap>
+
+    <select id="listaAlunos" resultMap="alunoResult">
+        SELECT * FROM aluno
+    </select>
+
+    <select id="pegaAluno" resultMap="alunoResult">
+        SELECT * FROM aluno
+        WHERE id_aluno=#{idAluno}
+    </select>
+
+
+</mapper>
