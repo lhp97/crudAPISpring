@@ -13,6 +13,10 @@ public class AlunoService {
     @Autowired
     private AlunoMapper alunoMapper;
 
+    public void insereAluno(Aluno aluno) {
+        alunoMapper.insereAluno(aluno);
+    }
+
     public List<Aluno> listaAlunosService() {
         return alunoMapper.listaAlunos();
     }

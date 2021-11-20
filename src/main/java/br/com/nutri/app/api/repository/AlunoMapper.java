@@ -8,6 +8,8 @@ import java.util.List;
 @Mapper
 public interface AlunoMapper {
 
+    void insereAluno(Aluno param);
+
     List<Aluno> listaAlunos();
 
     Aluno pegaAluno(Integer param);
