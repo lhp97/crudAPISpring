@@ -2,6 +2,7 @@ package br.com.nutri.app.api.service;
 
 import br.com.nutri.app.api.model.Aluno;
 import br.com.nutri.app.api.repository.AlunoMapper;
+import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,8 @@ public class AlunoService {
     private AlunoMapper alunoMapper;
 
     public void insereAluno(Aluno aluno) {
+        Assert.assertNotNull(aluno);
+
         alunoMapper.insereAluno(aluno);
     }
 
