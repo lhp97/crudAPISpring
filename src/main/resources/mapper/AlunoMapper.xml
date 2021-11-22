@@ -11,8 +11,10 @@
         <result column="rg" property="rgAluno"/>
     </resultMap>
 
-    <insert id="insereAluno" keyProperty="id_aluno">
-        SELECT last_insert_id() as id_aluno
+    <insert id="insereAluno" keyProperty="idAluno">
+        <selectKey keyProperty="idAluno" order="AFTER" resultType="int">
+            SELECT last_insert_id() as idAluno
+        </selectKey>
         INSERT INTO aluno
             (nome_aluno,
              idade_aluno,
