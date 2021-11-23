@@ -29,6 +29,17 @@
             #{rgAluno})
     </insert>
 
+    <update id="atualizaAluno">
+        UPDATE aluno SET
+         nome_aluno=#{nomeAluno},
+         idade_aluno=#{idadeAluno},
+         sexo_aluno=#{sexoAluno},
+         cpf=#{cpfAluno},
+         rg=#{rgAluno}
+        WHERE id_aluno=#{idAluno}
+    </update>
+
+
     <select id="listaAlunos" resultMap="alunoResult">
         SELECT * FROM aluno
     </select>

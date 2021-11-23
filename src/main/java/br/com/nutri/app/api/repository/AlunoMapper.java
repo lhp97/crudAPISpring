@@ -10,6 +10,8 @@ public interface AlunoMapper {
 
     void insereAluno(Aluno param);
 
+    void atualizaAluno(Aluno param);
+
     List<Aluno> listaAlunos();
 
     Aluno pegaAluno(Integer param);
